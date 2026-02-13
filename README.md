@@ -80,4 +80,58 @@ Each benchmark was run multiple times with warm-up runs and peak memory tracking
 ---
 
 ## Repository Structure
+.
+├── benchmarks/
+│ ├── csv_read_benchmark.ipynb
+│ └── analytical_benchmark.ipynb
+├── results/
+│ ├── benchmark_summary.csv
+│ └── plots/
+├── figures/
+├── README.md
+
+
+---
+
+## Important Notes
+
+- DuckDB → DataFrame benchmarks may use row limits to avoid out-of-memory crashes.
+- Memory measurements reflect **peak usage**, not final resident size.
+- Results may vary depending on hardware and filesystem performance.
+
+---
+
+## When to Use Each Tool
+
+- **Pandas**: Small datasets, prototyping, ecosystem compatibility
+- **Polars**: High-performance DataFrame transformations with sufficient RAM
+- **DuckDB**: SQL-style analytics on datasets larger than memory
+
+---
+
+## Article & Write-up
+
+A detailed explanation of the results and methodology is available here:
+
+👉 *When Pandas Crashed My Laptop: A 13-Million-Row Wake-Up Call*  
+(Linked from Medium)
+
+---
+
+## Reproducibility
+
+All benchmarks were executed with:
+- Python 3.10
+- Pandas 2.x
+- Polars 0.20.x
+- DuckDB 0.10.x
+
+See notebooks for exact versions and configuration.
+
+---
+
+## License
+
+MIT License
+
 
