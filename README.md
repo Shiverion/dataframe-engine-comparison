@@ -79,16 +79,21 @@ Each benchmark was run multiple times with warm-up runs and peak memory tracking
 
 ---
 
+
 ## Repository Structure
+
+```
 .
 ├── benchmarks/
-│ ├── csv_read_benchmark.ipynb
-│ └── analytical_benchmark.ipynb
+│   ├── csv_read_benchmark.ipynb
+│   └── analytical_benchmark.ipynb
 ├── results/
-│ ├── benchmark_summary.csv
-│ └── plots/
+│   ├── benchmark_summary.csv
+│   └── plots/
 ├── figures/
 ├── README.md
+```
+
 
 
 ---
