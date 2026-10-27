@@ -135,6 +135,35 @@ See notebooks for exact versions and configuration.
 
 ---
 
+## System Design
+
+### Requirements
+
+- Compare Pandas, Polars, and DuckDB on CSV reads and analytical workloads.
+- Record elapsed time and memory observations for the configured input file.
+
+### Pipeline
+
+```text
+Google Drive mount → configured CSV path → repeated dataframe workloads
+                  → timing and memory measurements → notebook outputs
+```
+
+`Benchmark.ipynb` is the only benchmark runner. Its dataset path is a placeholder and the repository does not contain the benchmark CSV or a results directory, so the README's dataset size and performance claims are not reproduced by this checkout alone.
+
+### Trade-offs
+
+| Decision | Benefit | Cost |
+| --- | --- | --- |
+| Notebook-based local measurements | Easy to inspect and adapt workloads | Results depend on the runtime, machine, and input path |
+| Compare eager, lazy, and SQL paths | Shows different execution models | Equivalent operations can require different setup |
+
+### What to Revisit
+
+- Provide the dataset source and a documented path configuration.
+- Save raw run measurements and hardware/software versions with each result.
+- Separate warm-up runs from measured repetitions.
+
 ## License
 
 MIT License
